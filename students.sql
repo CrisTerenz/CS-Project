@@ -1,0 +1,6 @@
+BEGIN TRANSACTION;
+DROP TABLE IF EXISTS "students";
+CREATE TABLE students (
+
+);
+COMMIT;
