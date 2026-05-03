@@ -75,7 +75,7 @@ def view_students():
     
     print("\n--- Student List ---")
     if not rows:
-        print("No records found in the database.")[cite: 1]
+        print("No records found in the database.")
     else:
         for row in rows:
             print(row)
