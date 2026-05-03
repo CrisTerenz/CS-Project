@@ -39,9 +39,9 @@ def validate_input(pattern, prompt, error_msg):
 def add_student():
     print("\n--- Add New Student ---")
     s_id = validate_input(r"^20\d{2}-\d{3}$", "Student ID (20YY-XXX): ", "Format must be 20YY-XXX.")
-    fname = input("First Name: ").strip()
-    mname = input("Middle Name: ").strip()
-    lname = input("Last Name: ").strip()
+    fname = validate_input(r"^[a-zA-Z0-9 .]+$", "First Name: ", "Only alphanumeric characters, spaces, and periods are allowed.")
+    mname = validate_input(r"^[a-zA-Z0-9 .]+$", "Middle Name: ", "Only alphanumeric characters, spaces, and periods are allowed.")
+    lname = validate_input(r"^[a-zA-Z0-9 .]+$", "Last Name: ", "Only alphanumeric characters, spaces, and periods are allowed.")
     gender = validate_input(r"^(Male|Female|Others\s*-\s*.+)$", "Gender (Male, Female, Others - please specify): ", "Enter Male, Female, or Others - [specify].")
     bday = validate_input(r"^\d{2}/\d{2}/\d{4}$", "Birthdate (MM/DD/YYYY): ", "Format must be MM/DD/YYYY.")
     bplace = input("Birthplace: ").strip()
