@@ -47,8 +47,8 @@ def add_student():
     bplace = input("Birthplace: ").strip()
     email = validate_input(r"^[\w\.-]+@[\w\.-]+\.\w+$", "Email: ", "Invalid email format.")
     contact = validate_input(r"^(09|\+639)\d{9}$", "Contact Number: ", "Must start with 09 or +639 followed by 9 digits.")
-    section = validate_input(r"^Dahlia|Kamia|Rosal|Sampaguita$", "Section (Dahlia, Kamia, Rosal, Sampaguita): ", "Invalid section.").title()
-    color = validate_input(r"^Red|Yellow|Green|Blue$", "League Color (Red, Yellow, Green, Blue): ", "Invalid league color.").title()
+    section = validate_input(r"^(Dahlia|Kamia|Rosal|Sampaguita)$", "Section (Dahlia, Kamia, Rosal, Sampaguita): ", "Invalid section.").title()
+    color = validate_input(r"^(Red|Yellow|Green|Blue)$", "League Color (Red, Yellow, Green, Blue): ", "Invalid league color.").title()
 
     if not all([fname, mname, lname, gender, bplace, section, color]):
         print("Error: All fields are required.")
