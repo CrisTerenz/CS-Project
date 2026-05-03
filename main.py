@@ -67,7 +67,6 @@ def add_student():
         conn.close()
 
 def view_students():
-    """Displays all records and handles the empty database case[cite: 1]."""
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM students")
