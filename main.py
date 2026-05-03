@@ -47,7 +47,7 @@ def add_student():
     bplace = input("Birthplace: ").strip()
     email = validate_input(r"^[\w\.-]+@[\w\.-]+\.\w+$", "Email: ", "Invalid email format.")
     contact = validate_input(r"^(09|\+639)\d{9}$", "Contact Number: ", "Must start with 09 or +639 followed by 9 digits.")
-    section = input("Section (Dahlia, Kamia, Rosal, Sampaguita): ").strip()
+    section = validate_input(r"^Dahlia|Kamia|Rosal|Sampaguita$", "Section (Dahlia, Kamia, Rosal, Sampaguita): ", "Invalid section.")
     color = input("League Color (Red, Yellow, Green, Blue): ").strip()
 
     if not all([fname, mname, lname, gender, bplace, section, color]):
