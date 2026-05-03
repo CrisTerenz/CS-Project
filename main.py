@@ -42,7 +42,7 @@ def add_student():
     fname = input("First Name: ").strip()
     mname = input("Middle Name: ").strip()
     lname = input("Last Name: ").strip()
-    gender = input("Gender (Male, Female, Others): ").strip()
+    gender = validate_input(r"^(Male|Female|Others\s*-\s*.+)$", "Gender (Male, Female, Others - please specify): ", "Enter Male, Female, or Others - [specify].")
     bday = validate_input(r"^\d{2}/\d{2}/\d{4}$", "Birthdate (MM/DD/YYYY): ", "Format must be MM/DD/YYYY.")
     bplace = input("Birthplace: ").strip()
     email = validate_input(r"^[\w\.-]+@[\w\.-]+\.\w+$", "Email: ", "Invalid email format.")
